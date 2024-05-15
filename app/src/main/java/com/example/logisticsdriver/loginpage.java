@@ -41,6 +41,12 @@ public class loginpage extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+        if(auth.getCurrentUser()!=null){
+            Intent i = new Intent(loginpage.this,homepage.class);
+            startActivity(i);
+            finish();
+        }
+
 
         tv = findViewById(R.id.loginintosignup);
         tv.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +82,14 @@ public class loginpage extends AppCompatActivity {
                 });
             }
         });
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
 
 
     }

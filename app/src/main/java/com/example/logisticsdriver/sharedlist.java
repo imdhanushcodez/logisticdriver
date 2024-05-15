@@ -1,5 +1,6 @@
 package com.example.logisticsdriver;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -42,6 +43,12 @@ public class sharedlist extends AppCompatActivity {
             return insets;
         });
 
+        ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading..."); // Set your own message
+        progressDialog.setCancelable(false); // Set if the user can cancel the operation
+        progressDialog.show();
+
+
 
         rc = findViewById(R.id.rechome);
         rc.setHasFixedSize(true);
@@ -63,6 +70,7 @@ public class sharedlist extends AppCompatActivity {
 
                 }
                 myadapter.notifyDataSetChanged();
+                progressDialog.dismiss();
             }
 
             @Override
@@ -72,5 +80,11 @@ public class sharedlist extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

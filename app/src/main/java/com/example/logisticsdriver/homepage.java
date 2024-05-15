@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +14,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class homepage extends AppCompatActivity {
-    ConstraintLayout btn;
+    ConstraintLayout btn,about_page;
+    FirebaseAuth auth;
+    TextView user_id;
 
 
     @SuppressLint("MissingInflatedId")
@@ -29,7 +34,23 @@ public class homepage extends AppCompatActivity {
             return insets;
         });
 
+
+
         btn = findViewById(R.id.btn1);
+        about_page = findViewById(R.id.about_page);
+        user_id = findViewById(R.id.user_id);
+
+        auth = FirebaseAuth.getInstance();
+        String k = "";
+        k = auth.getCurrentUser().getEmail();
+        String o = "";
+        for(int i=0;i<k.length();i++) {
+            if(k.charAt(i)=='@') break;
+            o+=k.charAt(i);
+        }
+
+        user_id.setText(o.toUpperCase());
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,5 +58,19 @@ public class homepage extends AppCompatActivity {
                 startActivity(I);
             }
         });
+
+        about_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(homepage.this,about_page.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
     }
 }
