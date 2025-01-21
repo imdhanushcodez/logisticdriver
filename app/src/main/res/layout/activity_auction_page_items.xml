@@ -6,22 +6,21 @@
     android:background="@drawable/bgm2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sharedlist">
-
+    tools:context=".auction_page_items">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:letterSpacing="0.06"
-        android:text="AVAILABLE JOBS"
+        android:text="AUCTION ITEM"
         android:textColor="@color/white"
-        android:textSize="@dimen/_15sdp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121"></TextView>
+        app:layout_constraintVertical_bias="0.109"></TextView>
 
     <ImageView
         android:layout_width="@dimen/_50sdp"
@@ -34,12 +33,12 @@
         app:layout_constraintVertical_bias="0.018"></ImageView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rechome"
+        android:id="@+id/auction_recycle_page"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_520sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97"
+        app:layout_constraintVertical_bias="0.932"
         tools:layout_editor_absoluteX="0dp"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

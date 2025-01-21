@@ -14,7 +14,7 @@
         android:layout_height="@dimen/_35sdp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/atruck"
+        android:background="@drawable/uploading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </ImageView>
@@ -36,6 +36,8 @@
         android:layout_marginStart="114dp"
         android:layout_marginTop="16dp"
         android:text="DEMOS"
+        android:textStyle="bold"
+        android:textAllCaps="true"
         android:id="@+id/rcfrom"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +47,10 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_35sdp"
+        android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="48dp"
-        android:background="@drawable/struck"
+        android:background="@drawable/delivery"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
@@ -70,9 +72,10 @@
         android:layout_marginStart="94dp"
         android:layout_marginTop="56dp"
         android:text="demos"
+        android:textStyle="bold"
+        android:textAllCaps="true"
         android:id="@+id/rcto"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
@@ -82,7 +85,7 @@
         android:layout_height="@dimen/_25sdp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="98dp"
-        android:background="@drawable/profile"
+        android:background="@drawable/owner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </ImageView>
@@ -93,21 +96,21 @@
         android:layout_marginTop="102dp"
         android:text="demos"
         android:id="@+id/rcname"
+        android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
 
     <ImageView
         android:layout_width="@dimen/_25sdp"
-        android:layout_height="@dimen/_25sdp"
+        android:layout_height="@dimen/_20sdp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="138dp"
-        android:background="@drawable/products"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/packages"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </ImageView>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -115,8 +118,8 @@
         android:layout_marginTop="139dp"
         android:text="demos"
         android:id="@+id/rcproduct"
+        android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
@@ -126,7 +129,7 @@
         android:layout_height="@dimen/_25sdp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="179dp"
-        android:background="@drawable/cash"
+        android:background="@drawable/moneyind"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </ImageView>
@@ -137,8 +140,8 @@
         android:layout_marginTop="184dp"
         android:text="demos"
         android:id="@+id/rcdate"
+        android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </TextView>

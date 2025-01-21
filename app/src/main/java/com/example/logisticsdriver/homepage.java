@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class homepage extends AppCompatActivity {
-    ConstraintLayout btn,about_page;
+    ConstraintLayout btn,about_page,auction_btn;
     FirebaseAuth auth;
     TextView user_id;
 
@@ -39,6 +40,16 @@ public class homepage extends AppCompatActivity {
         btn = findViewById(R.id.btn1);
         about_page = findViewById(R.id.about_page);
         user_id = findViewById(R.id.user_id);
+        auction_btn = findViewById(R.id.auction_btn);
+
+
+        auction_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(homepage.this,auction_page_items.class);
+                startActivity(i);
+            }
+        });
 
         auth = FirebaseAuth.getInstance();
         String k = "";
@@ -66,6 +77,8 @@ public class homepage extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Toast.makeText(homepage.this,"WELCOME TO LOGISTICS "+o,Toast.LENGTH_LONG).show();
     }
 
     @Override

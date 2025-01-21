@@ -3,9 +3,9 @@
     <item>
         <shape android:shape="rectangle" android:padding="10dp">
             <corners
-                android:radius="@dimen/_10sdp"
+                android:radius="@dimen/_5sdp"
                 />
-            <solid android:color="@color/white">
+            <solid android:color="#E8D3D2">
             </solid>
         </shape>
     </item>
